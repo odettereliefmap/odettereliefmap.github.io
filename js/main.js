@@ -68,8 +68,8 @@
     }
 
     content += `<p>How do we know them?`
-    content += (!!it.know) ? ` ${it.know} ` : `Haven't kept a record of that.`
-    content += `. See <a href="./about.html">the About page</a> for more info.</p>`
+    content += (!!it.know) ? ` ${it.know}.` : `Haven't kept a record of that.`
+    content += ` See <a href="./about.html">the About page</a> for more info.</p>`
 
     // ... create a popup
     var popup = L.popup({className: 'projectpopup'}).setContent(content)
