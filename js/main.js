@@ -29,6 +29,16 @@
   }).addTo(map);
 
   // Our markers!
+  var ngoIcon = L.icon({
+    iconUrl: './img/marker_ngo.png',
+    shadowUrl: './img/marker_ngo_shadow.png',
+
+    iconSize:     [31, 50], // size of the icon
+    shadowSize:   [29, 43], // size of the shadow
+    iconAnchor:   [15, 50], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 50],  // the same for the shadow
+    popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+  });
   var projectIcon = L.icon({
     iconUrl: './img/marker_normal.png',
     shadowUrl: './img/marker_normal_shadow.png',
@@ -66,6 +76,9 @@
 
     // choose an icon
     var icon = projectIcon;
+    if (it.what === 'NGO') {
+      icon = ngoIcon
+    }
 
     // and add a marker to the map.
     // “Binding” means: If you click on the marker, the popup opens.
