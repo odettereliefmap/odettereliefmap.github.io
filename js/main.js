@@ -20,7 +20,7 @@
 
   // Choose a random project and center the map there.
     var random = mapData[Math.floor((Math.random() * mapData.length))];
-    map.setView([random.lat, random.lng], 6);
+    map.setView([random.lat, random.lng], 8);
 
   // Add tiles to the map.
   // Also adds the attribution in the bottom right of the map. (It's okay for now.)
