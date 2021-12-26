@@ -61,10 +61,10 @@
 
     content += `<p><strong>${it.what}</strong></p>`
 
-    content += `<p>Announcement: <a href="${it.annLink}" target="_blank">${it.annName}</a></p>`
+    content += `<p>Fundraising announcement: <a href="${it.annLink}" target="_blank">${it.annName}</a></p>`
 
     if (!!it.prjHome) {
-      content += `<p><a href="${it.prjHome}" target="_blank">Project Homepage</a></p>`
+      content += `<p>Organizers: <a href="${it.prjHome}" target="_blank">${it.name}</a></p>`
     }
 
     content += `<p>How do we know them?`
